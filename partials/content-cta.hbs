@@ -1,0 +1,23 @@
+{{!-- Content preview --}}
+<div class="post-sneak-peek{{#if fading}} fading{{/if}}">
+  {{{html}}}
+</div>
+
+{{!-- Post Access CTA --}}
+<div class="post-access-cta p-lg text-center {{visibility}}">
+  <h3>{{t "Access Galaxy Member Content"}}</h3>
+  {{#has visibility="members"}}
+    <p class="text-acc-3">
+    {{t "Sign up now to unlock extended content, receive a weekly innovation inspiration newsletter, and access community features."}}
+    </p>
+      <a class="btn btn--brand btn--rounded m-b" href="/signup/">{{t "Subscribe"}}</a>
+  {{/has}}
+  {{#has visibility="paid"}}
+    <p class="text-acc-3">
+      {{t "Upgrade now to access Constellation VIP content, community, and resources."}}
+    </p>
+      <a class="btn btn--brand btn--rounded m-b" href="javascript:void(0)" data-members-plan="Monthly">{{t "Subscribe"}}</a>
+  {{/has}}
+
+  <div class="small">{{t "Already have an account?"}} <a class="post-access-alt" href="/signin/">{{t "Sign in"}}</a></div>
+</div>

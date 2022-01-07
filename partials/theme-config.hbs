@@ -1,0 +1,175 @@
+<script>
+  // Basic Config
+  let CONFIG = {
+    /* Replace it with your domain, example 'https://yoursite.domain' */
+    GHOST_URL: 'https://everydayinnovation.ghost.io',
+
+    /* Settings > Integrations > New Custom Integration. Copy Key. Replace GHOST_KEY below. */
+    GHOST_KEY: 'f715f67d1efb0593a806a3b958',
+
+    /* Ghost version: v4 or v3 */
+    GHOST_VERSION: 'v4',
+
+    /* Search result limit */
+    GHOST_SEARCH_LIMIT: 8,
+
+    /* Enable/disable Search in post content */
+    GHOST_SEARCH_IN_CONTENT: true,
+
+    /* Default view of posts: list/grid. */
+    DEFAULT_VIEW_TYPE: 'grid',
+
+    /* Nr of columns for post cards. Possible values 2 or 3. */
+    DEFAULT_GRID_COLUMNS: 3,
+
+    /* Default Color Scheme. Values: preference(detects user setting), light, dark. */
+    DEFAULT_COLOR_SCHEME: 'dark',
+
+    /* Enable Color cheme picker */
+    ENABLE_COLOR_SCHEME_PICKER: true,
+
+    /* Enable lightbox for post images */
+    ENABLE_IMAGE_LIGHTBOX: true,
+
+    /* Enable Scroll Top Button */
+    ENABLE_SCROLL_TO_TOP: true,
+
+    /* Enable filter feature on homepage */
+    ENABLE_FILTER: false,
+
+    /* Enable hyphens */
+    ENABLE_HYPHENS: false,
+
+    /* Enable PWA - Progressive Web App */
+    ENABLE_PWA: true,
+
+    /* Enable Sticky Header */
+    ENABLE_STICKY_HEADER: true,
+
+    /* Replace 'biron-demo' with your disqus account shortname */
+    DISQUS_SHORTNAME: 'everydayinnovation',
+
+    /* To use Cove, replace the below id with your cove publication id*/
+    COVE_ID: '38541ea13117cda95f4ac731fcd62933',
+
+    /* Open external links in posts in a new tab */
+    OPEN_LINKS_IN_NEW_TAB: false
+  }
+
+  // Color schemes, you can either modify the existing ones or add new ones
+  const COLOR_SCHEMES = [
+    {
+      "id": "light",
+      "name": "Light",
+      "colors": {
+        "primary": "var(--ghost-accent-color)",
+        "primary_dark": "hsl(253,91%,67%)",
+        "primary_light": "hsl(253,91%,61%)",
+        "secondary": "hsl(42, 81%, 67%)",
+        "secondary_dark": "hsl(42, 92%, 70%)",
+        "secondary_light": "hsl(42, 92%, 65%)",
+        "text": "hsl(0, 0%, 10%)",
+        "text_acc_1": "hsl(0, 0%, 20%)",
+        "text_acc_2": "hsl(0, 0%, 30%)",
+        "text_acc_3": "hsl(0, 0%, 40%)",
+        "text_reverse": "hsl(0, 0%, 90%)",
+        "bg_body": "hsl(7, 18%, 93%)",
+        "bg": "hsl 342,8%,29%)",
+        "bg_acc_1": "hsl(0, 0%, 98%)",
+        "bg_acc_2": "hsl(0, 0%, 96%)",
+        "bg_acc_3": "hsl(0, 0%, 94%)",
+        "bg_reverse": "hsl(0, 0%, 10%)",
+        "neutral": "hsl(0, 0%, 50%)",
+        "border": "hsl(0, 7%, 83%)"
+      }
+    },
+    {
+      "id": "dark",
+      "name": "Dark",
+      "colors": {
+        "primary": "var(--ghost-accent-color)",
+        "primary_dark": "hsl(253,91%,67%)",
+        "primary_light": "hsl(253,91%,61%)",
+        "secondary": "hsl(45, 87%, 71%)",
+        "secondary_dark": "hsl(20, 92%, 80%)",
+        "secondary_light": "hsl(20, 92%, 65%)",
+        "text": "hsl(0, 0%, 90%)",
+        "text_acc_1": "hsl(0, 0%, 80%)",
+        "text_acc_2": "hsl(0, 0%, 70%)",
+        "text_acc_3": "hsl(0, 0%, 60%)",
+        "text_reverse": "hsl(0, 0%, 10%)",
+        "bg": "hsl(0, 0%, 8%)",
+        "bg_body": "hsl(0, 0%, 3%)",
+        "bg_acc_1": "hsl(0, 0%, 10%)",
+        "bg_acc_2": "hsl(0, 0%, 12%)",
+        "bg_acc_3": "hsl(0, 0%, 15%)",
+        "bg_reverse": "hsl(0, 0%, 90%)",
+        "neutral": "hsl(0, 0%, 50%)",
+        "border": "hsl(0, 0%, 15%)"
+      }
+    }
+  ];
+    // {
+    //   "id": "whitesmoke",
+    //   "name": "Whitesmoke",
+    //   "colors": {
+    //     "primary": "hsl(354, 81%, 65%)",
+    //     "primary_dark": "hsl(354, 81%, 62%)",
+    //     "primary_light": "hsl(354, 81%, 68%)",
+    //     "secondary": "hsl(185, 54%, 45%)",
+    //     "secondary_dark": "hsl(185, 54%, 42%)",
+    //     "secondary_light": "hsl(185, 54%, 48%)",
+    //     "text": "hsl(34, 36%, 10%)",
+    //     "text_acc_1": "hsl(34, 36%, 20%)",
+    //     "text_acc_2": "hsl(34, 36%, 30%)",
+    //     "text_acc_3": "hsl(34, 36%, 40%)",
+    //     "text_reverse": "hsl(34, 36%, 90%)",
+    //     "bg": "hsl(34, 36%, 96%)",
+    //     "bg_body": "hsl(34, 36%, 93%)",
+    //     "bg_acc_1": "hsl(34, 36%, 90%)",
+    //     "bg_acc_2": "hsl(34, 36%, 88%)",
+    //     "bg_acc_3": "hsl(34, 36%, 85%)",
+    //     "bg_reverse": "hsl(34, 36%, 10%)",
+    //     "neutral": "hsl(34, 36%, 50%)",
+    //     "border": "hsl(34, 36%, 85%)"
+    //   }
+    // },
+    // {
+    //   "id": "midnight",
+    //   "name": "Midnight",
+    //   "colors": {
+    //     "primary": "hsl(309, 52%, 50%)",
+    //     "primary_dark": "hsl(309, 52%, 47%)",
+    //     "primary_light": "hsl(309, 52%, 53%)",
+    //     "secondary": "hsl(56, 88%, 60%)",
+    //     "secondary_dark": "hsl(56, 88%, 57%)",
+    //     "secondary_light": "hsl(56, 88%, 63%)",
+    //     "text": "hsl(250, 63%, 90%)",
+    //     "text_acc_1": "hsl(250, 63%, 85%)",
+    //     "text_acc_2": "hsl(250, 63%, 80%)",
+    //     "text_acc_3": "hsl(250, 63%, 75%)",
+    //     "text_reverse": "hsl(250, 63%, 10%)",
+    //     "bg": "hsl(250, 63%, 10%)",
+    //     "bg_body": "hsl(250, 63%, 5%)",
+    //     "bg_acc_1": "hsl(250, 63%, 15%)",
+    //     "bg_acc_2": "hsl(250, 63%, 20%)",
+    //     "bg_acc_3": "hsl(250, 63%, 25%)",
+    //     "bg_reverse": "hsl(250, 63%, 90%)",
+    //     "neutral": "hsl(250, 63%, 50%)",
+    //     "border": "hsl(250, 63%, 23%)"
+    //   }
+    // }
+
+</script>
+
+<style>
+  body {
+    --global-max-width: 1280px;
+    --global-radius: 4px;
+    --global-radius-round: 70%;
+    --global-header-position: initial;
+    --global-hyphens: none;
+    --global-menu-icons: none;
+    --global-menu-alignement: flex-start; /* flex-start / center / flex-end */
+  }
+</style>

@@ -1,0 +1,33 @@
+{
+  "name":"Everyday Innovation",
+  "short_name":"Everyday Innovation",
+  "description":"Everyday Innovation | Inspiring Creator-Led Impact",
+  "lang":"en",
+  "start_url":"/",
+  "background_color":"#000000",
+  "display":"standalone",
+  "theme_color":"#602ca3",
+  "icons":[
+     {
+        "src":"/assets/48.png",
+        "sizes":"48x48",
+        "type":"image/png"
+     },
+     {
+      "src": "/assets/192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/assets/192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    }
+  ]
+}
