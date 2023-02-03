@@ -2,9 +2,9 @@
   <header class="checkout-plan__hdr m-b flex flex-col flex-cc text-acc-1 p-b border-bottom-1">
     <h3 class="checkout-plan__title m-b-xs">{{t "Monthly"}}</h3>
     <div class="checkout-plan__price">
-      <sup>{{price currency=@price.currency}}</sup><strong>{{@price.monthly}}</strong>
+      <sup>{{#get "tiers" currency}}{{/get}}</sup><strong>{{price yearly_price currency=currency}}</strong>
     </div>
-    <a class="btn btn--brand btn--sm btn--rounded" 
+    <a class="btn btn--brand btn--sm btn--rounded"
       href="javascript:void(0)" data-members-plan="Monthly">
       {{#if @member}}{{t "Upgrade"}}{{else}}{{t "Subscribe now"}}{{/if}}
     </a>
