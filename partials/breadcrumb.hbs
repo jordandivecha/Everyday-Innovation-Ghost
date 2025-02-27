@@ -1,0 +1,7 @@
+<ul class="breadcrumb">
+	<li class="breadcrumb-item"><a href="{{@site.url}}">{{t "Home"}}</a></li>
+	{{#foreach tags limit="1"}}
+    <li class="breadcrumb-item"><a href="{{url}}">{{name}}</a></li>
+  {{/foreach}}
+  <li class="breadcrumb-item breadcrumb-item-current">{{title}}</li>
+</ul>

@@ -1,0 +1,32 @@
+{{!-- Menu CTA based on member level --}}
+{{#if @member.paid}}
+  {{!-- Premium member: no CTA --}}
+{{else if @member}}
+  {{!-- Free member: Upgrade --}}
+  <div class="p">
+    <div class="menu-cta">
+      {{#if @site.icon}}
+        <img class="lazyload menu-cta__icon"
+          data-src="{{img_url @site.icon size="xs"}}"
+          src="{{img_url @site.icon size="xxs"}}"
+          alt="{{@site.title}}"/>
+      {{/if}}
+      <div class="menu-cta__headline">{{t "Unlock full access to see the entire library by subscribing to a paid plan."}}</div>
+      {{#link class="btn btn--sm btn--primary" href="/membership/"}}{{t "Upgrade"}}{{/link}}
+    </div>
+  </div>
+{{else}}  
+  {{!-- Non member: Sign up --}}
+  <div class="p">
+    <div class="menu-cta">
+      {{#if @site.icon}}
+        <img class="lazyload menu-cta__icon"
+          data-src="{{img_url @site.icon size="xs"}}"
+          src="{{img_url @site.icon size="xxs"}}"
+          alt="{{@site.title}}"/>
+      {{/if}}
+      <div class="menu-cta__headline">{{t "Unlock full access to see the entire library by subscribing to a paid plan."}}</div>
+      <a class="btn btn--xs btn--dark" href="/signup/"{{#if @custom.use_portal_links}} data-portal="signup"{{/if}}>{{t "Sign up"}}</a>
+    </div>
+  </div>
+{{/if}}
