@@ -4,7 +4,7 @@
     {{#is "post"}}
       <div class="tag-list flex flex-wrap m-b-sm">
         {{#foreach tags}}
-          <a class="tag-{{slug}} tag-list__item{{^if @first}} m-l-sm{{/if}}{{#if accent_color}} has-accent flex flex-cc{{/if}}" 
+          <a class="tag-{{slug}} tag-list__item{{^if @first}} m-l-sm{{/if}}{{#if accent_color}} has-accent flex flex-cc{{/if}}"
             href="{{url}}" title="{{name}}" aria-label="{{name}}">
             {{#if accent_color}}
               <span class="tag-list__item--accent" style="background-color: {{accent_color}}"></span>
