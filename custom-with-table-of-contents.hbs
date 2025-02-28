@@ -10,12 +10,15 @@
         {{> social-share}}
       {{/if}}
       <div class="content">
+<<<<<<< HEAD
         {{#if custom_excerpt}}
           <p class="context-excerpt text-lg">
             {{custom_excerpt}}
           </p>
         {{/if}}
 
+=======
+>>>>>>> upstream/main
         {{#if access}}
           {{content}}
         {{else}}
@@ -72,9 +75,26 @@
             if (document.readyState === "complete") {
               // table of contents toggle
               const tocToggleBtn = document.querySelector('.js-toc-toggle');
+<<<<<<< HEAD
               if (tocToggleBtn) {
                 tocToggleBtn.onclick = function(event) {
                   event.currentTarget.classList.toggle('is-active');
+=======
+              const postToc = document.querySelector('.js-post-toc');
+
+
+              // media query for TOC function
+              const mqSmall = window.matchMedia('(max-width: 767px)');
+              const mqLarge = window.matchMedia('(min-width: 768px)');
+
+              if (tocToggleBtn && postToc) {
+                // if device is large, show the TOC by default
+                if (mqLarge.matches) tocToggleBtn.classList.add('is-active');
+
+                // open/close the TOC
+                tocToggleBtn.onclick = function(event) {
+                  this.classList.toggle('is-active');
+>>>>>>> upstream/main
                 }
               }
 
@@ -86,8 +106,11 @@
               
               }, false);
 
+<<<<<<< HEAD
               const postToc = document.querySelector('.js-post-toc');
 
+=======
+>>>>>>> upstream/main
               if (postToc) {
                 tocbot.init({
                   // Where to render the table of contents.

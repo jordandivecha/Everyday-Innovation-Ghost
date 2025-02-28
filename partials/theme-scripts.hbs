@@ -1,7 +1,11 @@
 <script>
   // Dark/Light Theme Handling
   let preferredTheme; 
+<<<<<<< HEAD
   if (CONFIG.DEFAULT_COLOR_SCHEME === 'preference') {
+=======
+  if (CONFIG.DEFAULT_COLOR_SCHEME.toLowerCase() === 'system') {
+>>>>>>> upstream/main
     const preferredColorScheme = 
     ( window.matchMedia 
       && window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -10,7 +14,11 @@
     : 'light'
     preferredTheme = localStorage.getItem('USER_COLOR_SCHEME') || preferredColorScheme;
   } else {
+<<<<<<< HEAD
     preferredTheme = localStorage.getItem('USER_COLOR_SCHEME') || CONFIG.DEFAULT_COLOR_SCHEME;
+=======
+    preferredTheme = localStorage.getItem('USER_COLOR_SCHEME') || CONFIG.DEFAULT_COLOR_SCHEME.toLowerCase();
+>>>>>>> upstream/main
   }
   document.documentElement.setAttribute('data-color-scheme', preferredTheme);
 
@@ -57,11 +65,15 @@
       return `
         html[data-color-scheme="${theme.id}"], button[data-color-scheme="${theme.id}"] {
           --color-primary: ${theme.colors.primary};
+<<<<<<< HEAD
           --color-primary-dark: ${theme.colors.primary_dark};
           --color-primary-light: ${theme.colors.primary_light};
           --color-secondary: ${theme.colors.secondary};
           --color-secondary-dark: ${theme.colors.secondary_dark};
           --color-secondary-light: ${theme.colors.secondary_light};
+=======
+          --color-secondary: ${theme.colors.secondary};
+>>>>>>> upstream/main
 
           --color-text: ${theme.colors.text};
           --color-text-acc-1: ${theme.colors.text_acc_1};

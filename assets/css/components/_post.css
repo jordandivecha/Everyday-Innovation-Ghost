@@ -13,7 +13,11 @@
     margin-bottom: var(--gap-lg);
   }
 
+<<<<<<< HEAD
   a:not([class*="kg-"]) { 
+=======
+  a:not([class*="kg-"],[class*="btn"],[class*="link-no-style"]) { 
+>>>>>>> upstream/main
     color: var(--color-primary); 
     border-bottom: 1px solid var(--color-primary);
 
@@ -23,6 +27,7 @@
   }
 }
 
+<<<<<<< HEAD
 [data-color-scheme="dark"] {
   .content a:not([class*="kg-"]) {
     color: var(--color-secondary); 
@@ -30,6 +35,8 @@
   }
 }
 
+=======
+>>>>>>> upstream/main
 .js-toc-content {
   h1[id],
   h2[id],
@@ -40,15 +47,27 @@
 }
 
 .post-sneak-peek {
+<<<<<<< HEAD
   position: relative;
   user-select: none;
+=======
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+>>>>>>> upstream/main
 
   &.fading:after {
     content: "";
     position: absolute;
     right: 0;
     bottom: 0;
+<<<<<<< HEAD
     left: 0;
+=======
+    left: -1em;
+    width: calc(100% + 2em);
+>>>>>>> upstream/main
     height: 80%;
     background: linear-gradient(transparent, var(--color-bg-body) 85%);
   }

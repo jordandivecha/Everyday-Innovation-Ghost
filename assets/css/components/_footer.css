@@ -22,6 +22,15 @@
       @media (--mq-md) {
         margin-bottom: 0;
       }
+<<<<<<< HEAD
+=======
+
+      span {
+        font-size: calc(var(--font-size-base)*1.4 + .25vw);
+        font-weight: var(--font-weight-700);
+        line-height: calc(var(--line-height-base)*.9);
+      }
+>>>>>>> upstream/main
     }
 
     &-action {

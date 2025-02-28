@@ -2,15 +2,25 @@
 
 <div class="container wrapper">
   {{!-- Subscribe --}}
+<<<<<<< HEAD
 {{>welcome cover-is-bg=true}}
 
   {{!-- Featured posts --}}
   {{> featured}}
+=======
+  {{> welcome cover-is-bg=true}}
+
+  {{#if @custom.featured_slider}}
+    {{!-- Featured posts slider --}}
+    {{> featured}}
+  {{/if}}
+>>>>>>> upstream/main
 
   {{!-- Filter --}}
   {{> filter-bar}}
 
   {{!-- Posts --}}
+<<<<<<< HEAD
   <div class="row">
     <div class="col-xs-12 col-lg-9 col-xl-9 m-b-lg">
       <div class="grid post-feed js-post-feed">
@@ -33,6 +43,45 @@
 
   {{!-- Main Tags --}}
   {{#get "tags" include="count.posts" order="count.posts desc" limit="8"}}
+=======
+  {{#if @custom.post_feed_sidebar}}
+    <div class="row">
+      <div class="col-xs-12 col-lg-8 col-xl-9 m-b-lg">
+        <div class="grid post-feed js-post-feed">
+          {{#foreach posts}}
+            {{> post-card show_img=true }}
+          {{/foreach}}
+        </div>
+
+        {{!-- Load more posts --}}
+        <div class="col-xs-12 center-xs m-t-lg">
+          <button class="btn btn--wide btn--rounded btn--shadow btn--brand js-load-more">
+            {{t "Load more posts"}}
+          </button>
+        </div>
+      </div>
+      <div class="col-xs-12 col-lg-4 col-xl-3">
+        {{> sidebar }}
+      </div>
+    </div>
+  {{else}}
+    <div class="grid post-feed js-post-feed">
+      {{#foreach posts}}
+        {{> post-card show_img=true }}
+      {{/foreach}}
+    </div>
+
+    {{!-- Load more posts --}}
+    <div class="col-xs-12 center-xs m-t-lg">
+      <button class="btn btn--wide btn--rounded btn--shadow btn--brand js-load-more">
+        {{t "Load more posts"}}
+      </button>
+    </div>
+  {{/if}}
+
+  {{!-- Main Tags --}}
+  {{#get "tags" filter="visibility:public" include="count.posts" order="count.posts desc" limit="8"}}
+>>>>>>> upstream/main
     <div class="section__title m-t-lg m-b">{{t "Explore topics"}}</div>
     <div class="row">
       {{#foreach tags}}
@@ -42,4 +91,19 @@
       {{/foreach}}
     </div>
   {{/get}}
+<<<<<<< HEAD
+=======
+
+  {{!-- Authors --}}
+  {{#get "authors" include="count.posts" order="count.posts desc" limit="6"}}
+    <div class="section__title m-t m-b">{{t "Authors"}}</div>
+    <div class="row">
+      {{#foreach authors}}
+        <div class="col-xs-12 col-md-6 col-xl-4 m-b-lg">
+          {{> author-card type="mini" mini=true}}
+        </div>
+      {{/foreach}}
+    </div>
+  {{/get}}
+>>>>>>> upstream/main
 </div>

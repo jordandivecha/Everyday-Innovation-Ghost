@@ -4,7 +4,11 @@
   <a class="social-share__item js-share" tabindex="0" target="_blank"
       href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute='true'}}"
       title="{{t "Share on"}} Twitter" aria-label="{{t "Share on"}} Twitter">
+<<<<<<< HEAD
     {{>icon name="twitter" size="sm"}}
+=======
+    {{>menu-icon name="twitter-x" size="sm"}}
+>>>>>>> upstream/main
   </a>
   {{!-- facebook --}}
   <a class="social-share__item js-share" tabindex="0"
@@ -28,6 +32,7 @@
       title="{{t "Copy to clipboard"}}" data-label="{{t "Copied!"}}" aria-label="{{t "Copy to clipboard"}}">
     {{>icon name="copy" size="sm"}}
   </button>
+<<<<<<< HEAD
 
   <button class="handle-bookmark js-handle-bookmark" tabindex="0"
       data-id="{{comment_id}}" data-url="{{url absolute='true'}}" data-title="{{title}}"
@@ -39,6 +44,13 @@
 
 
 
+=======
+  <button class="handle-bookmark js-handle-bookmark" tabindex="0" 
+      data-id="{{comment_id}}" data-url="{{url absolute='true'}}" data-title="{{title}}"
+      title="{{t "Bookmark"}}" data-label="" aria-label="{{t "Bookmark"}}">
+    {{>icon name="bookmark" size="sm"}}
+  </button>
+>>>>>>> upstream/main
 </div>
 
 {{#contentFor "scripts"}}
@@ -54,12 +66,20 @@
     let bookmarked = bookmarks.some(function(i) { return i.id.includes('{{comment_id}}')});
     bookmarked ? bookmarkBtn.classList.add('is-saved') : '';
 
+<<<<<<< HEAD
     /**
+=======
+    /** 
+>>>>>>> upstream/main
     * Handle bookmark
     * @id - Post ID
     * @url - Post url
     * @title - Post title
+<<<<<<< HEAD
     */
+=======
+    */ 
+>>>>>>> upstream/main
     const handleBookmark = function(event) {
       // Save input values in an object
       let bookmarkObject = {
@@ -68,44 +88,77 @@
         title: event.currentTarget.getAttribute('data-title')
       }
 
+<<<<<<< HEAD
       if (bookmarked) {
+=======
+      if (bookmarked) { 
+>>>>>>> upstream/main
         // Remove bookmark
         const index = bookmarks.findIndex( function(b) { b.id == bookmarkObject.id });
         bookmarks.splice(index, 1);
         localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
         localStorage
         bookmarked = false;
+<<<<<<< HEAD
         bookmarkBtn.classList.remove('is-saved');
         bookmarkBtn.setAttribute('data-label', GLOBAL.REMOVE_BOOKMARK_MSG);
       } else {
+=======
+        bookmarkBtn.classList.remove('is-saved'); 
+        bookmarkBtn.setAttribute('data-label', GLOBAL.REMOVE_BOOKMARK_MSG);   
+      } else { 
+>>>>>>> upstream/main
         // Add bookmark
         bookmarks.push(bookmarkObject);
         localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
         bookmarked = true;
+<<<<<<< HEAD
         bookmarkBtn.classList.add('is-saved');
         bookmarkBtn.setAttribute('data-label', GLOBAL.ADD_BOOKMARK_MSG);
       }
 
       bookmarkBtn.classList.add('has-tooltip');
+=======
+        bookmarkBtn.classList.add('is-saved');  
+        bookmarkBtn.setAttribute('data-label', GLOBAL.ADD_BOOKMARK_MSG);  
+      }
+
+      bookmarkBtn.classList.add('has-tooltip'); 
+>>>>>>> upstream/main
       bookmarkBtn.blur();
 
       setTimeout(function(){
         bookmarkBtn.classList.remove('has-tooltip');
+<<<<<<< HEAD
       }, 1000);
     };
 
+=======
+      }, 1000); 
+    };    
+    
+>>>>>>> upstream/main
     const copyBtn = document.querySelector('.js-copy-link');
     if (copyBtn) {
       copyBtn.onclick = function(event) {
         copyToClipboard(event.currentTarget, event.currentTarget.getAttribute('data-url'));
       }
     }
+<<<<<<< HEAD
 
     /**
     * Copy to clipboard
     * @src - source element
     * @str - string to copy
     */
+=======
+    
+    /** 
+    * Copy to clipboard
+    * @src - source element
+    * @str - string to copy
+    */ 
+>>>>>>> upstream/main
     const copyToClipboard = function(src, str) {
       const el = document.createElement('textarea');
       el.value = str;
@@ -120,11 +173,19 @@
       src.classList.add('has-tooltip');
       src.setAttribute('data-label', 'Copied!');
 
+<<<<<<< HEAD
       src.onmouseleave = function() {
         src.classList.remove('has-tooltip');
         setTimeout(function(){
           src.setAttribute('data-label', '');
         }, 500);
+=======
+      src.onmouseleave = function() { 
+        src.classList.remove('has-tooltip');
+        setTimeout(function(){
+          src.setAttribute('data-label', '');
+        }, 500); 
+>>>>>>> upstream/main
       }
     };
 
@@ -138,11 +199,19 @@
       });
     }
 
+<<<<<<< HEAD
     /**
     * Social Share
     * @src - source element
     * @str - string to copy
     */
+=======
+    /** 
+    * Social Share
+    * @src - source element
+    * @str - string to copy
+    */ 
+>>>>>>> upstream/main
     const socialShare = function(href) {
       window.open(href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=290,width=580');
       return false;

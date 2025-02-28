@@ -41,6 +41,22 @@
       <span class="visibility m-r">{{visibility}}</span>
       <span class="m-r fw-400">&ndash;</span>
       <span class="read-time">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
+<<<<<<< HEAD
+=======
+      
+      {{#if comments}}
+        <div class="post-card__comment flex flex-cc">
+          <span class="m-l m-r fw-400">&ndash;</span>
+          {{>icon name="message-circle" size="xs"}}
+          {{comment_count
+            empty="0"
+            singular=""
+            plural=""
+            class="m-l-xs"
+          }}
+        </div>
+      {{/if}}
+>>>>>>> upstream/main
       {{#if featured}}
         <span class="featured m-l">{{> icon name="star" size="xs" }}</span>
       {{/if}}

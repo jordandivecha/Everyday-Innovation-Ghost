@@ -1,8 +1,15 @@
 {{!-- Announcement posts --}}
+<<<<<<< HEAD
 {{#get "posts" filter="tag:announcements" limit="3" as |announce|}}
   {{#if announce}}
     <div class="announcements">
       <button class="announce--toggle flex-cc js-announce-btn" type="button"
+=======
+{{#get "posts" filter="tag:hash-announcement" limit="3" as |announce|}}
+  {{#if announce}}
+    <div class="announcements">
+      <button class="announce--toggle flex-cc js-announce-btn" type="button" 
+>>>>>>> upstream/main
         title="{{t "Announcements"}}" aria-label="{{t "Announcements"}}">
         {{> icon name="bell" size="sm"}}
       </button>
@@ -10,12 +17,22 @@
       <div class="announce-feed js-announce-feed">
         {{#foreach announce}}
           {{#link href=(url) class="announce-post"}}
+<<<<<<< HEAD
             <h3 class="announce-post__title">{{title}}</h3>
             <div class="announce-post__description text-acc-3">{{excerpt words="12"}}&hellip;</div>
             <span class="text-acc-3">{{t "More"}} ⟶</span>
+=======
+            <span class="announce-post__title">{{title}}</span>
+            <div class="announce-post__description text-acc-3">{{excerpt words="12"}}&hellip;</div>
+            <span class="announce-post__icon text-acc-3">{{t "Learn more"}} ⟶</span>
+>>>>>>> upstream/main
           {{/link}}
         {{/foreach}}
       </div>
     </div>
   {{/if}}
+<<<<<<< HEAD
 {{/get}}
+=======
+{{/get}}
+>>>>>>> upstream/main

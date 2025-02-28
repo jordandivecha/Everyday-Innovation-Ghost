@@ -17,7 +17,11 @@
       padding-right: var(--gap);
 
       .header__search--toggle {
+<<<<<<< HEAD
         display: none;
+=======
+        /* display: none; */
+>>>>>>> upstream/main
       }
     }
   }
@@ -38,6 +42,32 @@
   &__center {
     display: none;
     position: relative;
+<<<<<<< HEAD
+=======
+    overflow: hidden;
+
+    .nav { 
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 1rem;
+      color: var(--color-text-acc-2);
+      width: 100%;
+      overflow: scroll;
+      @mixin hide-scrollbar;
+
+      a { 
+        white-space: nowrap;
+        
+        @mixin attention{ color: var(--color-text); } 
+      }
+    }
+    
+    &:focus-within {
+      overflow: visible;
+    }
+>>>>>>> upstream/main
 
     .search__icon {
       outline: none;
@@ -110,6 +140,10 @@
     padding: var(--gap-xs) 0;
     display: block;
     font-weight: var(--font-weight-700);
+<<<<<<< HEAD
+=======
+    line-height: 1;
+>>>>>>> upstream/main
   }
 
   &__menu {
@@ -154,9 +188,15 @@
     margin-left: var(--gap);
 
     @mixin attention {
+<<<<<<< HEAD
       background-color: var(--color-primary-dark);
       color: var(--color-white);
       cursor: pointer;
+=======
+      cursor: pointer;
+      color: var(--color-white);
+      filter: brightness(1.1) contrast(1.1);
+>>>>>>> upstream/main
     }
   }
 

@@ -10,6 +10,14 @@
   &__media {
     max-width: 40rem;
     margin: 0 auto;
+<<<<<<< HEAD
+=======
+    margin-bottom: var(--gap-lg);
+
+    &.has-caption {
+      margin-bottom: var(--gap-xl);
+    }
+>>>>>>> upstream/main
   
     &.wide {
       max-width: none;
@@ -20,9 +28,29 @@
     position: relative;
     margin: 0;
     padding-top: 56.25%;
+<<<<<<< HEAD
     overflow: hidden;
     background-color: var(--color-bg);
     border-radius: var(--global-radius);
+=======
+    /* overflow: hidden; */
+    background-color: var(--color-bg);
+    border-radius: var(--global-radius);
+
+    figcaption {
+      position: absolute;
+      width: 100%;
+
+      a { 
+        color: var(--color-primary); 
+        border-bottom: 1px solid var(--color-primary);
+
+        @mixin attention {
+          border-bottom-width: 2px;
+        }
+      }
+    }
+>>>>>>> upstream/main
   }
 
   &__img {

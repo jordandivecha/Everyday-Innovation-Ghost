@@ -6,12 +6,16 @@
   /* Colors
   /*--------------------------------------*/
   --color-primary: var(--ghost-accent-color, hsl(253,91%,64%));
+<<<<<<< HEAD
   --color-primary-light: 	hsl(253,91%,67%);
   --color-primary-dark: 	hsl(253,91%,61%);
 
   --color-secondary: hsl(20, 92%, 60%);
   --color-secondary-light: hsl(20, 92%, 63%);
   --color-secondary-dark: hsl(20, 92%, 57%);
+=======
+  --color-secondary: hsl(20, 92%, 60%);
+>>>>>>> upstream/main
 
   /* neutral colors */
   --color-black: hsl(0, 0%, 0%);

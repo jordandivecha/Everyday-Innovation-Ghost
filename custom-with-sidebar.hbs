@@ -7,17 +7,24 @@
 
     <div class="row">
       <div class="col-xs-12 col-lg-8{{#unless access}} col-lg-offset-2{{/unless}}">
+<<<<<<< HEAD
         <article class="{{post_class}} content-wrap post-access-{{visibility}} post-with-sidebar">
+=======
+        <article class="{{post_class}} content-wrap post-access-{{visibility}} no-overflow">
+>>>>>>> upstream/main
           {{#if access}}
             {{> social-share}}
           {{/if}}
           <div class="content">
+<<<<<<< HEAD
             {{#if custom_excerpt}}
               <p class="context-excerpt text-lg">
                 {{custom_excerpt}}
               </p>
             {{/if}}
 
+=======
+>>>>>>> upstream/main
             {{#if access}}
               {{content}}
             {{else}}

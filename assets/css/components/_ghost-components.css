@@ -1,4 +1,40 @@
+<<<<<<< HEAD
 /* Koenig editor styles */
+=======
+/*============================================================================*/
+/* General card style */
+/*============================================================================*/
+.kg-card {
+  margin: 0 0 var(--gap-lg);
+  align-self: center;
+  width: 100vw;
+  max-width: 100%;
+  border-radius: var(--global-radius);
+
+  input { margin: 0; }
+  img, div, a[data-fslightbox] { border-radius: inherit; }
+
+  &.kg-width-regular { 
+    max-width: 100%;
+  }
+
+  &.kg-width-wide {
+    @media (--mq-md) { max-width: 80vw; }   
+    @media (--mq-lg) { max-width: 70vw; }
+  }
+
+  &.kg-width-full {
+    @media (--mq-md) {
+      max-width: 100vw;
+      border-radius: 0;
+    }
+  }
+}
+
+/*============================================================================*/
+/* Embed card */
+/*============================================================================*/
+>>>>>>> upstream/main
 .kg-embed-card {
   display: flex;
   flex-direction: column;
@@ -7,11 +43,14 @@
   min-width: 100%;
   max-width: 100%;
 
+<<<<<<< HEAD
   figcaption {
     margin: var(--gap-sm) 0 0;
     color: var(--color-text-acc-3);
   }
 
+=======
+>>>>>>> upstream/main
   .fluid-width-video-wrapper {
     margin: 0;
   }
@@ -21,6 +60,7 @@
   }
 }
 
+<<<<<<< HEAD
 .kg-image-card,
 .kg-gallery-card {
   align-self: center;
@@ -33,18 +73,77 @@
     font-size: 0.9rem;
     font-weight: var(--font-weight-600);
     font-style: italic;
+=======
+/*============================================================================*/
+/* Image & Gallery card */
+/*============================================================================*/
+.kg-image-card, .kg-gallery-card { 
+  max-width: 100vw;
+
+  @media (--mq-sm) {
+    max-width: 100%;
+    border-radius: var(--global-radius);
+  }
+}
+
+.kg-image-card,
+.kg-gallery-image {
+  position: relative;
+
+  @media (--mq-sm) {
+    max-width: 100%;
+  }
+
+  @mixin attention {
+    .image-link {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .image-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--color-bg-alpha-75);
+    color: var(--color-white);
+    z-index: 5;
+    border: none!important;
+    right: var(--gap);
+    top: var(--gap);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--trans-default);
+
+    @mixin attention {
+      background-color: var(--color-bg);
+    }
+
+    .icon { 
+      color: var(--color-text); 
+    }
+>>>>>>> upstream/main
   }
 }
 
 .kg-image-card img, 
 .kg-gallery-card .kg-gallery-container {
+<<<<<<< HEAD
   max-width: 100vw;
+=======
+  max-width: 100%;
+>>>>>>> upstream/main
   margin-bottom: 0;
   display: block;
   margin: 0 auto;
   height: auto;
 }
 
+<<<<<<< HEAD
 @media (--mq-md) {
   .kg-image-card img {
     max-width: 100%;
@@ -68,10 +167,13 @@
   }
 }
 
+=======
+>>>>>>> upstream/main
 .kg-gallery-container {
   display: flex;
   flex-direction: column;
   margin-bottom: var(--gap);
+<<<<<<< HEAD
 
   @media (--mq-md) {
     width: 80vw;
@@ -98,6 +200,8 @@
   .kg-gallery-card {
     width: 100%;
   }
+=======
+>>>>>>> upstream/main
 }
 
 .kg-gallery-row {
@@ -114,6 +218,7 @@
 }
 
 .kg-gallery-row:not(:first-of-type) {
+<<<<<<< HEAD
   margin: var(--gap-sm) 0 0 0;
 }
 
@@ -122,6 +227,18 @@
 }
 
 /* Bookmark Style */
+=======
+  margin: var(--global-gallery-gap, 1em) 0 0 0;
+}
+
+.kg-gallery-image:not(:first-of-type) {
+  margin: 0 0 0 var(--global-gallery-gap, 1em);
+}
+
+/*============================================================================*/
+/* Bookmark card */
+/*============================================================================*/
+>>>>>>> upstream/main
 .kg-bookmark-card {
   background-color: var(--color-bg);
   width: 100%;
@@ -130,9 +247,20 @@
 
   @mixin attention {
     .kg-bookmark-title {
+<<<<<<< HEAD
       text-decoration: underline;
     }
   }
+=======
+      color: var(--color-primary)
+    }
+  }
+
+  .kg-bookmark-container { border-radius: inherit!important; border: none!important; }
+  .kg-bookmark-title { font-size: 1.2rem; }
+  .kg-bookmark-description { font-size: 1rem; }
+  .kg-bookmark-metadata { font-size: 0.9rem; }
+>>>>>>> upstream/main
 }
 
 .kg-card + .kg-bookmark-card {
@@ -144,7 +272,11 @@
   text-decoration: none;
   min-height: 148px;
   box-shadow: 0 0 0 1px var(--color-border);
+<<<<<<< HEAD
   border-radius: var(--global-radius);
+=======
+  border-radius: inherit;
+>>>>>>> upstream/main
   flex-direction: column-reverse;
 
   @media (--mq-sm) {
@@ -162,8 +294,13 @@
 }
 
 .kg-bookmark-title {
+<<<<<<< HEAD
   font-weight: var(--font-weight-700);
   margin-bottom: var(--gap);
+=======
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--gap-sm);
+>>>>>>> upstream/main
 }
 
 .kg-bookmark-description {
@@ -172,6 +309,11 @@
   -webkit-box-orient: vertical;    
   font-size: 0.9rem;
   margin-bottom: var(--gap);
+<<<<<<< HEAD
+=======
+  display: -webkit-box;
+  color: var(--color-text-acc-3);
+>>>>>>> upstream/main
 }
 
 .kg-bookmark-thumbnail {
@@ -202,7 +344,12 @@
   align-items: center;
   flex-wrap: wrap;    
   font-size: 0.9rem;
+<<<<<<< HEAD
   font-weight: var(--font-weight-600);
+=======
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-acc-2);
+>>>>>>> upstream/main
 }
 
 .kg-bookmark-icon {
@@ -224,14 +371,24 @@
   max-width: 240px;
 }
 
+<<<<<<< HEAD
 .kg-code-card {
   max-width: 100%;
+=======
+/*============================================================================*/
+/* Code card */
+/*============================================================================*/
+.kg-code-card {
+  max-width: 100%;
+  width: 100%;
+>>>>>>> upstream/main
   margin: 0;
   margin-bottom: var(--gap-lg);
 
   pre {
     margin-bottom: var(--gap-sm);
   }
+<<<<<<< HEAD
 
   figcaption {
     text-align: center;
@@ -240,3 +397,306 @@
     font-style: italic;
   }
 }
+=======
+}
+
+/*============================================================================*/
+/* Callout card */
+/*============================================================================*/
+.kg-callout-card { width: 100%; }
+.kg-card.kg-callout-card + .kg-callout-card {
+  margin-top: 0;
+}
+
+/*============================================================================*/
+/* Toggle card */
+/*============================================================================*/
+.kg-toggle-card { width: 100%; }
+.kg-card.kg-toggle-card + .kg-toggle-card {
+  margin-top: 0;
+}
+
+/*============================================================================*/
+/* Blockquote alt card */
+/*============================================================================*/
+.kg-blockquote-alt {
+  font-weight: var(--font-weight-semi-bold);
+  border: none;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0;
+}
+
+blockquote.kg-blockquote-alt {
+  padding: var(--gap);
+
+  @media (--mq-md) {
+    padding: var(--gap-lg);
+  }
+}
+
+/*============================================================================*/
+/* Video card */
+/*============================================================================*/
+.kg-video-card {
+  max-width: 100vw;
+
+  @media (--mq-sm) {
+    max-width: 100%;
+  }
+}
+
+/*============================================================================*/
+/* File card */
+/*============================================================================*/
+.kg-file-card { width: 100%; }
+
+/*============================================================================*/
+/* Header card */
+/*============================================================================*/
+.kg-header-card {
+  max-width: 100vw;
+}
+
+/*============================================================================*/
+/* Product card */
+/*============================================================================*/
+.kg-product-card-image {
+  height: auto;
+}
+
+/*============================================================================*/
+/* avoid overflow if wide/full cards */
+/*============================================================================*/
+.content-wrap.no-overflow {
+  @media (--mq-sm) {
+    .kg-card,
+    .kg-card.kg-width-wide,
+    .kg-card.kg-width-full { 
+      max-width: 100%; 
+      border-radius: var(--global-radius);
+    }
+
+    .kg-video-card { border-radius: 0!important; }
+  }
+}
+
+/*============================================================================*/
+/* Signup card */
+/*============================================================================*/
+.kg-card.kg-signup-card h2.kg-signup-card-heading { 
+  font-size: clamp(1.75rem,2.2vw,2.2rem); 
+}
+
+.kg-card.kg-signup-card.kg-width-wide h2.kg-signup-card-heading { 
+  font-size: clamp(1.75rem,2.8vw,2.8rem); 
+}
+
+.kg-card.kg-signup-card.kg-width-full h2.kg-signup-card-heading { 
+  font-size: clamp(2.25rem,3.5vw,3.5rem); 
+}
+
+.kg-card.kg-signup-card.kg-width-full.kg-layout-split h2.kg-signup-card-heading { 
+  font-size: clamp(2rem,3vw,3.2rem); 
+}
+
+.kg-card.kg-signup-card h3.kg-signup-card-subheading { 
+  font-size: clamp(1.1rem,1.25vw,1.25rem); 
+}
+
+.kg-card.kg-signup-card.kg-width-wide h3.kg-signup-card-subheading { 
+  font-size: clamp(1.1rem,1.5vw,1.5rem); 
+}
+
+.kg-card.kg-signup-card.kg-width-full h3.kg-signup-card-subheading:not(.kg-layout-split h3.kg-signup-card-subheading) { 
+  font-size: clamp(1.1rem,1.6vw,1.6rem); 
+}
+
+.kg-card.kg-signup-card.kg-width-full.kg-layout-split h3.kg-signup-card-subheading {
+  font-size: clamp(1.1rem,1.6vw,1.6rem); 
+}
+
+.kg-card.kg-header-card h2+h3.kg-header-card-subheader, 
+.kg-card.kg-signup-card h2+h3.kg-signup-card-subheading {
+  margin: 0.75em 0 0;
+}
+
+.kg-card.kg-signup-card.kg-width-full { max-width: 100vw; border-radius: 0; }
+.kg-card.kg-signup-card.kg-width-full img { width: 100%; }
+
+.kg-card.kg-signup-card.kg-width-full:not(.kg-layout-split) .kg-signup-card-content { 
+  max-width: min(90vw,70vw); margin: 0 auto; 
+}
+    
+.kg-card .kg-signup-card-subheading+.kg-signup-card-form { margin: 1.5vmax 0 0; }
+.kg-card.kg-width-wide .kg-signup-card-subheading+.kg-signup-card-form { margin: 1.5vmax 0 0; }
+.kg-card.kg-width-full .kg-signup-card-subheading+.kg-signup-card-form { margin: 2vmax 0 0; }
+  
+.kg-card .kg-signup-card-input {
+  height: 3rem;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+    
+.kg-card .kg-signup-card-input:hover, 
+.kg-card .kg-signup-card-input:focus { 
+  border: none; box-shadow: none; 
+}
+    
+.kg-card .kg-signup-card-button {
+  height: 3rem;
+}
+    
+.kg-card .kg-signup-card-fields { border-radius: 4px!important; } 
+.kg-card .kg-signup-card-disclaimer { font-size: 0.95rem; }
+
+.no-overflow .kg-card.kg-signup-card.kg-width-wide .kg-signup-card-text,
+.no-overflow .kg-card.kg-signup-card.kg-width-full .kg-signup-card-text {
+  padding: 4vmax;
+}
+
+.no-overflow .kg-signup-card.kg-layout-split .kg-signup-card-content {
+  grid-template-columns: 1fr;
+}
+
+.no-overflow .kg-signup-card .kg-signup-card-content .kg-signup-card-image {
+  height: auto; max-height: 400px;
+}
+
+/*============================================================================*/
+/* No space between full width cards when no title */
+/*============================================================================*/
+.page-template .content {
+  .kg-width-full + .kg-width-full { margin-top: -2em; }
+
+  & > *:last-child { margin-bottom: 0; }
+  & > *:last-child:not(.kg-width-full) { margin-bottom: 2em; }
+}
+
+.page-template.page-no-title .content-wrap { margin-bottom: 0; }
+.page-template.page-no-title .main { padding-top: 0; }
+
+/*============================================================================*/
+/* Header card v2 */
+/*============================================================================*/
+.kg-header-card-content .kg-header-card-image {
+  width: 100%;
+}
+
+.kg-card.kg-header-card h2.kg-header-card-heading { 
+  font-size: clamp(1.75rem,2.2vw,2.2rem); 
+  line-height: 1.2;
+}
+
+.kg-card.kg-header-card.kg-width-wide h2.kg-header-card-heading { 
+  font-size: clamp(1.75rem,2.8vw,2.8rem); 
+}
+
+.kg-card.kg-header-card.kg-width-full h2.kg-header-card-heading { 
+  font-size: clamp(2.25rem,3.5vw,3.5rem); 
+}
+
+.kg-card.kg-header-card.kg-width-full.kg-layout-split h2.kg-header-card-heading { 
+  font-size: clamp(2rem,3vw,3.2rem); 
+}
+
+.kg-card.kg-header-card h3.kg-header-card-subheading { 
+  font-size: clamp(1.1rem,1.25vw,1.25rem); 
+}
+
+.kg-card.kg-header-card p.kg-header-card-subheading { 
+  font-size: clamp(1.1rem,1.25vw,1.25rem); 
+}
+
+.kg-card.kg-header-card.kg-width-wide h3.kg-header-card-subheading { 
+  font-size: clamp(1.1rem,1.5vw,1.5rem); 
+}
+
+.kg-card.kg-header-card.kg-width-full h3.kg-header-card-subheading:not(.kg-layout-split h3.kg-header-card-subheading) { 
+  font-size: clamp(1.1rem,1.6vw,1.6rem); 
+}
+
+.kg-card.kg-header-card.kg-width-full.kg-layout-split h3.kg-header-card-subheading {
+  font-size: clamp(1.1rem,1.6vw,1.6rem); 
+}
+
+.kg-card.kg-header-card h2+h3.kg-header-card-subheading {
+  margin: 0.75em 0 0;
+}
+
+.kg-card.kg-header-card.kg-width-full:not(.kg-layout-split) .kg-header-card-content { 
+  max-width: min(90vw,var(--global-wide-width)); margin: 0 auto; 
+}
+
+.kg-card.kg-header-card.kg-v2 { display: block; }
+
+.kg-card.kg-header-card.kg-v2 .kg-header-card-button { height: 2.5em; }
+
+.kg-card.kg-header-card.kg-v2 picture {
+  border-radius: inherit;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Product card */
+/* -------------------------------------------------------------------------- */
+.content .kg-product-card .kg-product-card-description ol, 
+.content .kg-product-card .kg-product-card-description p, 
+.content .kg-product-card .kg-product-card-description ul {
+  opacity: 0.85;
+}
+.content .kg-product-card-container {
+  background: var(--color-bg-acc);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-body);
+  box-shadow: none;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* Bookmark card */
+/* -------------------------------------------------------------------------- */
+.content .kg-bookmark-icon {
+  margin-right: 6px;
+}
+
+.content .kg-bookmark-card a.kg-bookmark-container, 
+.content .kg-bookmark-card a.kg-bookmark-container:hover {
+  background: var(--color-bg-acc);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+.content .kg-bookmark-content {
+  font-family: var(--font-body);
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* Audio card */
+/* -------------------------------------------------------------------------- */
+.content .kg-audio-card {
+  background: var(--color-bg-acc);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-body);
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* File card */
+/* -------------------------------------------------------------------------- */
+.content .kg-file-card a.kg-file-card-container {
+  background: var(--color-bg-acc);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-body);
+}
+.kg-card figcaption { background-color: var(--color-bg-body); }
+.kg-card figcaption p { margin: 0; }
+
+/* -------------------------------------------------------------------------- */
+/* Fix unwanted margins in kg card texts wrapped in <p> */
+/* -------------------------------------------------------------------------- */
+.content .kg-card *:where(h1,h2,h3,h4,h5,h6) p:not([class]) { margin: 0; font-size: inherit; }
+>>>>>>> upstream/main

@@ -5,7 +5,10 @@
     {{!-- Logged in: Redirect to home --}}
     <script>window.location = '{{@site.url}}';</script>
   {{else}}
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/main
     {{#page}}
       {{#if feature_image}}
         <div class="site__cover">
@@ -28,7 +31,11 @@
         {{!-- Add logo or title --}}
         {{#if @site.logo}}
           {{!-- Site logo --}}
+<<<<<<< HEAD
           <img class="site__logo"
+=======
+          <img class="site__logo" 
+>>>>>>> upstream/main
             src="{{img_url @site.logo size="s"}}"
             alt="{{@site.title}}"/>
         {{else}}
@@ -40,12 +47,23 @@
       <div class="site__content shadow">
         {{!-- Not logged in: Signin form --}}
         <h1 class="site__title">{{#page}}{{title}}{{else}}{{t "Sign in"}}{{/page}}</h1>
+<<<<<<< HEAD
         <p id="form-input-label">{{t "Sign into your Galaxy Member hub again for full access."}}</p>
         {{> subscribe-form form_type="signin" button_text=(t 'Send login link')}}
         <p class="m-t-lg m-0 text-center">
           <small>{{t "Don't have an account yet?"}} <a href="/signup/">{{t "Sign up"}}</a></small>
+=======
+        <p id="form-input-label">{{t "Sign into your account again for full access."}}</p>
+        {{> subscribe-form form_type="signin" button_text=(t 'Send login link')}}
+        <p class="m-t-lg m-0 text-center">
+          <small>{{t "Don't have an account yet?"}} <a href="/signup/"{{#if @custom.use_portal_links}} data-portal="signup"{{/if}}>{{t "Sign up"}}</a></small>
+>>>>>>> upstream/main
         </p>
       </div>
     </div>
   {{/if}}
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> upstream/main

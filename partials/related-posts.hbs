@@ -1,6 +1,10 @@
 {{!-- Related Posts --}}
 {{#if primary_tag}}
+<<<<<<< HEAD
   {{#get "posts" include="tags,authors" limit="3" filter="id:-{{id}}+tag:{{primary_tag.slug}}" as |related|}}
+=======
+  {{#get "posts" include="tags,authors" limit="3" filter="id:-{{comment_id}}+tag:{{primary_tag.slug}}" as |related|}}
+>>>>>>> upstream/main
     {{#if posts}}
     <div class="related-posts m-t-lg">
       <div class="section__title m-b">{{t "You might also like"}}</div>

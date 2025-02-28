@@ -6,15 +6,25 @@
       <div class="sidebar__section p-xs bg-gradient shadow">
         <div class="sidebar__subscribe flex flex-col bg-default">
           <h4 class="text-center text-xl text-acc-1">{{t "Premium Membership"}}</h4>
+<<<<<<< HEAD
           <div class="m-b text-acc-3">{{t "Unlock full access to see the entire library by subscribing to a paid plan."}}</div>
           <a href="#/portal/account" class="btn btn--primary btn--rounded btn--xs self-align-center">{{t "Upgrade"}}</a>
+=======
+          <div class="m-b text-acc-3">{{t "Unlock full access to see the entire library by subscribing to a paid plan."}}</div> 
+          <a href="/membership/" class="btn btn--primary btn--rounded btn--xs self-align-center">{{t "Upgrade"}}</a>
+>>>>>>> upstream/main
         </div>
       </div>
     {{else}}
       <div class="sidebar__section p-xs bg-gradient shadow">
         <div class="sidebar__subscribe bg-default">
+<<<<<<< HEAD
           <h4 class="text-center text-acc-1">{{@site.title}} {{t "Subscribe"}}</h4>
           <div class="m-b text-acc-3">{{t "Unlock more content, community features, and actionable inspiration straight to your inbox!"}}</div>
+=======
+          <h4 class="text-center text-acc-1">{{@site.title}} {{t "Newsletter"}}</h4>
+          <div class="m-b text-acc-3">{{t "Get the latest insights directly to your inbox!"}}</div>
+>>>>>>> upstream/main
           {{> subscribe-form}}
         </div>
       </div>
@@ -23,7 +33,11 @@
 
   {{!-- Sidebar featured posts --}}
   {{#is "post"}}
+<<<<<<< HEAD
     {{#get "posts" filter="featured:true+id:-{{id}}" limit="3" include="authors,tags" as |featured|}}
+=======
+    {{#get "posts" filter="featured:true+id:-{{comment_id}}" limit="3" include="authors,tags" as |featured|}}
+>>>>>>> upstream/main
       {{#if featured}}
       <div class="sidebar__section shadow">
         <div class="section__title">{{t "Featured posts"}}</div>
@@ -35,12 +49,21 @@
             </h6>
             {{#if feature_image}}
               <a href="{{url}}" class="sidebar-story__media m-l">
+<<<<<<< HEAD
                 <img
                   class="lazyload"
                   data-sizes="auto"
                   data-src="{{img_url feature_image size="xs"}}"
                   src="{{img_url feature_image size="xxs"}}"
                   alt="{{title}}"
+=======
+                <img 
+                  class="lazyload" 
+                  data-sizes="auto"
+                  data-src="{{img_url feature_image size="xs"}}"
+                  src="{{img_url feature_image size="xxs"}}"
+                  alt="{{title}}" 
+>>>>>>> upstream/main
                 />
               </a>
             {{/if}}
@@ -69,7 +92,11 @@
     {{#get "tags" limit="20" include="count.posts" order="count.posts desc"}}
       <div class="tag-list flex flex-wrap">
         {{#foreach tags}}
+<<<<<<< HEAD
           <a class="tag-{{slug}} tag-list__item m-b-sm m-r-sm{{#if accent_color}} has-accent flex flex-cc{{/if}}"
+=======
+          <a class="tag-{{slug}} tag-list__item m-b-sm m-r-sm{{#if accent_color}} has-accent flex flex-cc{{/if}}" 
+>>>>>>> upstream/main
             href="{{url}}" title="{{name}}" aria-label="{{name}}">
             {{#if accent_color}}
               <span class="tag-list__item--accent" style="background-color: {{accent_color}}"></span>
@@ -83,10 +110,17 @@
 
   {{!-- Sidebar latest posts --}}
   {{#is "post"}}
+<<<<<<< HEAD
     {{#get "posts" filter="featured:false+id:-{{id}}" limit="3" include="authors,tags" as |latest|}}
       {{#if posts}}
       <div class="sidebar__section shadow">
         <div class="section__title">{{t "Latest posts"}}</div>
+=======
+    {{#get "posts" filter="featured:false+id:-{{comment_id}}" limit="3" include="authors,tags" as |latest|}}
+      {{#if posts}}
+      <div class="sidebar__section shadow">   
+        <div class="section__title">{{t "Latest posts"}}</div>   
+>>>>>>> upstream/main
         <span class="special-delimiter m-t m-b"></span>
         {{#foreach latest}}
           <article class="sidebar-story">
@@ -95,8 +129,13 @@
             </h6>
             {{#if feature_image}}
               <a href="{{url}}" class="sidebar-story__media m-l">
+<<<<<<< HEAD
                 <img
                   class="lazyload"
+=======
+                <img 
+                  class="lazyload" 
+>>>>>>> upstream/main
                   data-sizes="auto"
                   data-src="{{img_url feature_image size="xs"}}"
                   src="{{img_url feature_image size="xxs"}}"
@@ -112,7 +151,11 @@
   {{/is}}
 
   {{!-- Sidebar authors --}}
+<<<<<<< HEAD
   <!-- {{^is "post"}}
+=======
+  {{^is "post"}}
+>>>>>>> upstream/main
     {{#get "authors" include="count.posts" order="count.posts desc" limit="6"}}
       <div class="section__title m-t m-b">{{t "Authors"}}</div>
       <div class="row">
@@ -123,5 +166,9 @@
         {{/foreach}}
       </div>
     {{/get}}
+<<<<<<< HEAD
   {{/is}} -->
+=======
+  {{/is}}
+>>>>>>> upstream/main
 </aside>

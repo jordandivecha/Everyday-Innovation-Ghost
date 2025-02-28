@@ -9,6 +9,7 @@
     </div>
 
     {{#unless @member.paid}}
+<<<<<<< HEAD
       <a class="upgrade-link" href="javascript:void(0)" data-members-plan="Monthly" tabindex="0"
         title="{{t "Upgrade"}}" aria-label="{{t "Upgrade"}}">
         {{>icon name="trending-up" size="xs"}}{{t "VIP"}}
@@ -23,19 +24,44 @@
     <a class="account-link" target="_blank" href="https://en.gravatar.com/"tabindex="0">
       {{>icon name="image" size="xs"}}{{t "Update avatar"}}
 </a>
+=======
+      <a class="upgrade-link" href="/membership/" tabindex="0"
+        title="{{t "Upgrade"}}" aria-label="{{t "Upgrade"}}">
+        {{>icon name="trending-up" size="xs"}}{{t "Upgrade"}}
+      </a>
+    {{/unless}}
+
+    <a class="account-link" href="/account/" tabindex="0"{{#if @custom.use_portal_links}} data-portal="account"{{/if}}
+      title="{{t "Account"}}" aria-label="{{t "Account"}}">
+      {{>icon name="user" size="xs"}}{{t "Account"}}
+    </a>
+
+>>>>>>> upstream/main
     <a class="signout-link" href="#signout" tabindex="0"
       title="{{t "Sign out"}}" aria-label="{{t "Sign out"}}"
       data-members-signout>
       {{>icon name="log-out" size="xs"}}{{t "Sign out"}}
     </a>
   {{else}}
+<<<<<<< HEAD
     <a class="signup-link" href="/signup/" tabindex="0"
       title="{{t "Sign up"}}" aria-label="{{t "Sign up"}}">
       {{>icon name="arrow-up-right" size="xs"}}{{t "Sign up"}}
     </a>
     <a class="signin-link" href="/signin/" tabindex="0"
+=======
+    <a class="signup-link" href="/signup/" tabindex="0"{{#if @custom.use_portal_links}} data-portal="signup"{{/if}}
+      title="{{t "Sign up"}}" aria-label="{{t "Sign up"}}">
+      {{>icon name="arrow-up-right" size="xs"}}{{t "Sign up"}}
+    </a>
+    <a class="signin-link" href="/signin/" tabindex="0"{{#if @custom.use_portal_links}} data-portal="signin"{{/if}}
+>>>>>>> upstream/main
       title="{{t "Sign in"}}" aria-label="{{t "Sign in"}}">
       {{>icon name="log-in" size="xs"}}{{t "Sign in"}}
     </a>
   {{/if}}
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> upstream/main

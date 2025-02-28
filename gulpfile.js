@@ -103,7 +103,11 @@ const js = done => {
     [
       src([
         `${npm_src}@tryghost/content-api/umd/content-api.min.js`,
+<<<<<<< HEAD
         `${npm_src}ghost-search/dist/ghost-search.min.js`,
+=======
+        // `${npm_src}fuse.js/dist/fuse.js`,
+>>>>>>> upstream/main
         `${npm_src}lazysizes/lazysizes.min.js`,
         `${npm_src}fitvids/dist/fitvids.min.js`,
         `${npm_src}prismjs/prism.js`,
@@ -147,7 +151,10 @@ const zipper = done => {
         '!dist/**',
         '!assets/dist/*.map',
         '!assets/icon*.png',
+<<<<<<< HEAD
         '!package-lock.json',
+=======
+>>>>>>> upstream/main
         '!.github',
         '!TODO.md',
         '!ROADMAP.md'
@@ -172,6 +179,10 @@ const build = series(icons, css, js);
 const dev = series(build, serve, watcher);
 
 exports.icons = icons;
+<<<<<<< HEAD
+=======
+exports.build = build;
+>>>>>>> upstream/main
 exports.css = css;
 exports.js = js;
 exports.zip = series(build, zipper);

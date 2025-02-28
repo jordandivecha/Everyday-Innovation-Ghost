@@ -47,6 +47,10 @@
 	visibility: hidden;
 	transform: translateY(15px);
   transition: all var(--trans-default);
+<<<<<<< HEAD
+=======
+  z-index: 100;
+>>>>>>> upstream/main
 
   &__content { 
     max-height: 65vh;

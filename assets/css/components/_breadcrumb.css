@@ -1,0 +1,24 @@
+.breadcrumb {
+  display: var(--global-breadcrumb);
+	list-style: none;
+	padding: 0;
+  color: var(--color-text-acc-2);
+  align-items: center;
+  justify-content: center;
+  
+  a {
+    @mixin attention {
+      color: var(--color-primary);
+    }
+  }
+}
+
+.breadcrumb li + li::before {
+  content: "/";
+  margin: 0 var(--gap-sm);
+  opacity: .5;
+}
+
+.breadcrumb-item-current {
+	font-weight: var(--font-weight-500);
+}

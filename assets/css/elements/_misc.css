@@ -6,6 +6,18 @@ hr {
   margin: var(--gap) 0;
 }
 
+<<<<<<< HEAD
+=======
+figcaption {
+  color: var(--color-text-acc-3);
+  font-size: .9rem;
+  font-style: italic;
+  font-weight: var(--font-weight-600);
+  padding: var(--gap-sm);
+  text-align: center;
+}
+
+>>>>>>> upstream/main
 abbr {
   -webkit-font-variant: small-caps;
   -moz-font-variant: small-caps;
@@ -32,4 +44,9 @@ var {
   -webkit-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> upstream/main

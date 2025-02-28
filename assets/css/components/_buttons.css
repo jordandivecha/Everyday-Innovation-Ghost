@@ -85,8 +85,13 @@
     color: var(--color-white);
 
     @mixin attention {
+<<<<<<< HEAD
       background-color: var(--color-primary-dark);
       border-color: var(--color-primary-dark);
+=======
+      border-color: var(--color-primary);
+      filter: brightness(1.1) contrast(1.1);
+>>>>>>> upstream/main
       color: var(--color-white);
       box-shadow: none;
     }
@@ -98,14 +103,20 @@
     color: var(--color-white);
 
     @mixin attention {
+<<<<<<< HEAD
       background-color: var(--color-primary-dark);
       border-color: var(--color-primary-dark);
+=======
+      border-color: var(--color-primary);
+      filter: brightness(1.1) contrast(1.1);
+>>>>>>> upstream/main
       color: var(--color-white);
       box-shadow: none;
     }
   }
 
   &--secondary {
+<<<<<<< HEAD
     background-color: var(--color-secondary-light);
     border-color: var(--color-secondary-light);
     color: var(--color-dark);
@@ -113,6 +124,15 @@
     @mixin attention {
       background-color: var(--color-secondary);
       border-color: var(--color-secondary);
+=======
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: var(--color-dark);
+
+    @mixin attention {
+      border-color: var(--color-secondary);
+      filter: brightness(1.1) contrast(1.1);
+>>>>>>> upstream/main
       color: var(--color-dark);
       box-shadow: none;
     }

@@ -4,7 +4,11 @@
 {{#post}}
   <div class="container wrapper">
     {{> site-hero}}
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> upstream/main
     <div class="{{post_class}} content-wrap post-access-{{visibility}}">
       <div class="content">
         {{#if access}}
@@ -12,9 +16,12 @@
           </div>
 
           {{content}}
+<<<<<<< HEAD
 
           {{else}}
           {{> content-cta fading=true}}
+=======
+>>>>>>> upstream/main
         {{/if}}
       </div>
     </div>
@@ -49,10 +56,17 @@
       }
     });
 
+<<<<<<< HEAD
     /**
     * Remove bookmark
     * @postId
     */
+=======
+    /** 
+    * Remove bookmark
+    * @postId
+    */ 
+>>>>>>> upstream/main
     const removeBookmark = function(parent, postId) {
       let filteredBookmarks = bookmarks.filter(function(item) {
         return item.id === postId;
@@ -66,3 +80,7 @@
     };
   </script>
 {{/contentFor}}
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/main

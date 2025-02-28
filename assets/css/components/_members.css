@@ -196,4 +196,45 @@
       margin-top: 0;
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+
+
+
+.checkout[data-plan] [data-plan] {
+  display: none;
+}
+
+.checkout[data-plan="monthly"] [data-plan="monthly"],
+.checkout[data-plan="annual"] [data-plan="annual"] {
+  display: inline-block;
+}
+
+.data-plan-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .data-plan-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 0 0.75em;
+  
+    &.monthly {
+      text-align: right;
+    }
+  }
+}
+
+.grid.pricing {
+  grid-gap: 2em;
+  grid-gap: var(--gap-lg);
+  grid-template-columns: repeat(auto-fit,minmax(16rem,1fr));
+}
+
+.page-membership .hero__post-info { display: none; }
+>>>>>>> upstream/main

@@ -136,13 +136,23 @@
 
 .color-scheme-picker {    
   display: flex;
+<<<<<<< HEAD
   flex-direction: column-reverse;
   position: absolute;
+=======
+  flex: 0;
+  flex-direction: column-reverse;
+  position: relative;
+>>>>>>> upstream/main
   bottom: 50px;
   left: 0;
   width: 100%;
 	opacity: 0;
 	visibility: hidden;
+<<<<<<< HEAD
+=======
+  height: 0;
+>>>>>>> upstream/main
 	transform: translateY(10px);
   transition: all var(--trans-default);
 }
@@ -169,4 +179,34 @@
     border-radius: var(--global-radius-round);
     box-shadow: 0 0 0 2px var(--color-border);
   }
+<<<<<<< HEAD
+=======
+}
+
+.menu-cta {
+  display: var(--global-menu-cta);
+  flex-direction: column;
+  padding: var(--gap);
+  background-color: var(--color-primary);
+  border-radius: var(--global-radius);
+  align-items: center;
+  justify-content: center;
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: var(--gap);
+  }
+
+  &__headline {
+    text-align: center;
+    margin-bottom: var(--gap);
+    color: var(--color-white);
+  }
+
+  .btn {
+    border-radius: 2em;
+  }
+>>>>>>> upstream/main
 }

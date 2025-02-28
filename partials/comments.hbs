@@ -1,4 +1,5 @@
 {{!-- Comments --}}
+<<<<<<< HEAD
 <div class="comments shadow bg-default flex flex-col flex-cc p-lg" id="comments">
   {{!-- Comment/Uncomment below line to activate or deactivate cove comments --}}
   {{ comments }}
@@ -6,3 +7,21 @@
   {{!-- Comment/Uncomment below line to activate or deactivate disqus comments --}}
   {{!-- {{> comments-disqus}} --}}
 </div>
+=======
+{{#if comments}}
+  <div class="comments shadow bg-default flex flex-col flex-cc p-lg p-b-0" id="comments">
+    {{!-- Comment/Uncomment below line to activate or deactivate native comments --}}
+    {{comments 
+      title=""
+      count=false
+      mode=auto
+    }}
+
+    {{!-- Comment/Uncomment below line to activate or deactivate cove comments --}}
+    {{!-- {{> comments-cove }} --}}
+
+    {{!-- Comment/Uncomment below line to activate or deactivate disqus comments --}}
+    {{!-- {{> comments-disqus}} --}}
+  </div>
+{{/if}}
+>>>>>>> upstream/main

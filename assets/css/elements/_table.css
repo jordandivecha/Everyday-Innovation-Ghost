@@ -1,6 +1,10 @@
 /* Table */
 table {
   display: inline-block;
+<<<<<<< HEAD
+=======
+  align-self: flex-start;
+>>>>>>> upstream/main
   overflow-x: auto;
   font-family: var(--font-sans);
   margin: var(--gap) 0 var(--gap-lg);

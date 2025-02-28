@@ -25,6 +25,7 @@
 @import 'components/_archive';
 @import 'components/_author';
 @import 'components/_bookmark';
+@import 'components/_breadcrumb';
 @import 'components/_buttons';
 @import 'components/_cards';
 @import 'components/_comments';
@@ -40,6 +41,7 @@
 @import 'components/_notification';
 @import 'components/_post';
 @import 'components/_post-card';
+@import 'components/_recommend';
 @import 'components/_scroll-top';
 @import 'components/_search';
 @import 'components/_sections';
